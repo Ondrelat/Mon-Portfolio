@@ -26,7 +26,7 @@ const Portfolio = () => {
     },
     {
       title: "Rock Paper Scissors Ultimate",
-      description: "Challenge to develop an extended version of Rock-Paper-Scissors with 17 possible moves in 2 hours",
+      description: "Challenge: I have 2 hours to develop an extended version of Rock-Paper-Scissors with 17 possible moves.",
       tags: ["Python", "Algorithms", "Game Logic"],
       isPersonal: true,
       links: {
