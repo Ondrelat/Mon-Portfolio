@@ -137,7 +137,7 @@ const Portfolio = () => {
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Passionate about creating modern, high-performance web applications.
-              Specialized in React, Next.js, and Python development.
+              Specialized in React, Next.js, Laravel, and Python development.
             </p>
             <a
               href="#contact"
