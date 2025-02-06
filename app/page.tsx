@@ -38,6 +38,7 @@ const Portfolio = () => {
       description: "A wiki-style project for learning about any topic.",
       tags: ["Next.js", "React", "PostgreSQL", "NestJs"],
       links: {
+        live: "https://categorise.vercel.app/",
         github: "https://github.com/Ondrelat/categorise"
       }
     },
