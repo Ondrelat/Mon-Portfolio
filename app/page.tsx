@@ -58,9 +58,11 @@ const Portfolio = () => {
       company: "TAGG INFORMATIQUE",
       period: "04/2021 - 10/2023",
       tasks: [
-        "Design and development of batch programs for automated printing",
-        "Management of shared codebase and technical documentation",
-        "Creation of specifications for new features"
+        "Development and implementation of batch programs and proprietary solutions for automated printing of variable data correspondence.",
+        "Review, optimization, and updating of existing programs in C#, C, and C++.",
+        "Development of HTML and CSS emails for the automated sending of communications.",
+        "Independent management and maintenance of the team's shared codebase, including updates to associated technical documentation.",
+        "Creation of specifications for the implementation of new features for programmers."
       ]
     },
     {
@@ -68,8 +70,9 @@ const Portfolio = () => {
       company: "SEQUENTIEL, Annecy",
       period: "06/2019 - 07/2019",
       tasks: [
-        "Sendinblue API integration for marketing automation",
-        "Performance optimization of applications"
+"Integrated the Sendinblue third-party API into a Symfony application to automate user registration and email marketing processes, while executing SQL queries to update and manage the database, ensuring consistent data.",
+    "Resolved proxy-related bugs and optimized resources in a .NET C# desktop application to improve connectivity, reduce application size, and maximize performance.",
+    "Integrated and updated using HTML/CSS."
       ]
     }
   ];
