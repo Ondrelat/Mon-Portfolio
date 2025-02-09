@@ -194,7 +194,7 @@ const Portfolio = () => {
               variants={fadeInUp}
               className="text-xl mb-8 max-w-2xl mx-auto"
             >
-Full-stack developer with 3 years of experience, primarily working with Next.js, C#, Laravel, and Batch. Passionate about technology, but even more about creation and the logic behind finding new ideas that solve problems.
+Full-stack developer with 3 years of experience, primarily working with Next.js, Python, C#, Laravel, and Batch. Passionate about technology, but even more about creation and the logic behind finding new ideas that solve problems.
             </motion.p>
             <motion.a
               initial="hidden"
