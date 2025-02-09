@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X, Github, Mail, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
@@ -194,8 +194,7 @@ const Portfolio = () => {
               variants={fadeInUp}
               className="text-xl mb-8 max-w-2xl mx-auto"
             >
-              Passionate about creating modern, high-performance web applications.
-              Specialized in React, Next.js, Laravel, and Python development.
+Full-stack developer with 3 years of experience, primarily working with Next.js, C#, Laravel, and Batch. Passionate about technology, but even more about creation and the logic behind finding new ideas that solve problems.
             </motion.p>
             <motion.a
               initial="hidden"
