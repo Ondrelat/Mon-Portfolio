@@ -59,7 +59,7 @@ const Portfolio = () => {
       period: "04/2021 - 10/2023",
       tasks: [
         "Development and implementation of batch programs and proprietary solutions for automated printing of variable data correspondence.",
-        "Review, optimization, and updating of existing programs in C#, C, and C++.",
+        "Review, optimization, and updating of existing programs in C#, C, and C++. ",
         "Development of HTML and CSS emails for the automated sending of communications.",
         "Independent management and maintenance of the team's shared codebase, including updates to associated technical documentation.",
         "Creation of specifications for the implementation of new features for programmers."
@@ -70,9 +70,21 @@ const Portfolio = () => {
       company: "SEQUENTIEL, Annecy",
       period: "06/2019 - 07/2019",
       tasks: [
-"Integrated the Sendinblue third-party API into a Symfony application to automate user registration and email marketing processes, while executing SQL queries to update and manage the database, ensuring consistent data.",
-    "Resolved proxy-related bugs and optimized resources in a .NET C# desktop application to improve connectivity, reduce application size, and maximize performance.",
-    "Integrated and updated using HTML/CSS."
+        "Integrated the Sendinblue third-party API into a Symfony application to automate user registration and email marketing processes, while executing SQL queries to update and manage the database, ensuring consistent data.",
+        "Resolved proxy-related bugs and optimized resources in a .NET C# desktop application to improve connectivity, reduce application size, and maximize performance.",
+        "Integrated and updated using HTML/CSS."
+      ]
+    }
+  ];
+
+  const education = [
+    {
+      title: "BTS Informatique, Specialization SLAM",
+      description: "Training in software development and information systems with a focus on designing, developing, and maintaining applications.",
+      projects: [
+        "Developed projects using .NET with TDD approach for high-quality code.",
+        "Collaborated in a team to develop a mobile game in Android Studio using SCRUM methodology and GIT version control.",
+        "Developed web applications with CakePHP, focusing on efficiency and security."
       ]
     }
   ];
@@ -98,6 +110,7 @@ const Portfolio = () => {
               <a href="#about" className="text-gray-600 hover:text-gray-900">About</a>
               <a href="#projects" className="text-gray-600 hover:text-gray-900">Projects</a>
               <a href="#experience" className="text-gray-600 hover:text-gray-900">Experience</a>
+              <a href="#education" className="text-gray-600 hover:text-gray-900">Education</a>
               <a href="#skills" className="text-gray-600 hover:text-gray-900">Skills</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
             </div>
@@ -120,6 +133,7 @@ const Portfolio = () => {
                 <a href="#about" className="block px-3 py-2 text-gray-600 hover:text-gray-900">About</a>
                 <a href="#projects" className="block px-3 py-2 text-gray-600 hover:text-gray-900">Projects</a>
                 <a href="#experience" className="block px-3 py-2 text-gray-600 hover:text-gray-900">Experience</a>
+                <a href="#education" className="block px-3 py-2 text-gray-600 hover:text-gray-900">Education</a>
                 <a href="#skills" className="block px-3 py-2 text-gray-600 hover:text-gray-900">Skills</a>
                 <a href="#contact" className="block px-3 py-2 text-gray-600 hover:text-gray-900">Contact</a>
               </div>
@@ -191,17 +205,38 @@ const Portfolio = () => {
           </div>
         </section>
 
+        {/* Education Section */}
+        <section id="education" className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Education</h2>
+            <div className="space-y-8">
+              {education.map((edu, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-semibold mb-2">{edu.title}</h3>
+                  <p className="text-gray-600 mb-4">{edu.description}</p>
+                  <ul className="list-disc list-inside text-gray-600">
+                    {edu.projects.map((project, projectIndex) => (
+                      <li key={projectIndex} className="ml-4">{project}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Experience Section */}
         <section id="experience" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Experience</h2>
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
+              {experiences.map((experience, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-md">
-                  <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
-                  <p className="text-gray-600 mb-2">{exp.company} | {exp.period}</p>
+                  <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
+                  <p className="text-gray-600 mb-4">{experience.company}</p>
+                  <p className="text-gray-600 mb-4">{experience.period}</p>
                   <ul className="list-disc list-inside text-gray-600">
-                    {exp.tasks.map((task, taskIndex) => (
+                    {experience.tasks.map((task, taskIndex) => (
                       <li key={taskIndex} className="ml-4">{task}</li>
                     ))}
                   </ul>
@@ -215,14 +250,11 @@ const Portfolio = () => {
         <section id="skills" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {skills.map((skill, index) => (
-                <span
-                  key={index}
-                  className="bg-gray-50 shadow-md px-6 py-3 rounded-lg text-gray-800"
-                >
+                <div key={index} className="text-center bg-blue-50 text-blue-800 p-4 rounded-lg">
                   {skill}
-                </span>
+                </div>
               ))}
             </div>
           </div>
@@ -231,37 +263,20 @@ const Portfolio = () => {
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-12">Contact</h2>
-            <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
-              <p className="mb-2 text-xl font-semibold">{personalInfo.name}</p>
-              <p className="mb-2">{personalInfo.address}</p>
-              <p className="mb-2">
-                <a href={`mailto:${personalInfo.email}`} className="text-blue-600 hover:text-blue-800">
-                  {personalInfo.email}
-                </a>
-              </p>
-              <p className="mb-6">{personalInfo.phone}</p>
-              <div className="flex justify-center space-x-6">
-                <a href="https://github.com" className="text-gray-600 hover:text-gray-900">
-                  <GithubIcon size={24} />
-                </a>
-                <a href="https://linkedin.com" className="text-gray-600 hover:text-gray-900">
-                  <LinkedinIcon size={24} />
-                </a>
-                <a href={`mailto:${personalInfo.email}`} className="text-gray-600 hover:text-gray-900">
-                  <MailIcon size={24} />
-                </a>
-              </div>
+            <h2 className="text-3xl font-bold mb-8">Contact</h2>
+            <div className="flex justify-center gap-8">
+              <a href={`mailto:${personalInfo.email}`} className="text-gray-600 hover:text-gray-800">
+                <MailIcon size={32} />
+              </a>
+              <a href="https://github.com/Ondrelat" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
+                <GithubIcon size={32} />
+              </a>
+              <a href="https://www.linkedin.com/in/benoit-avrillon/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
+                <LinkedinIcon size={32} />
+              </a>
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-8">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <p>© 2025 {personalInfo.name}. All rights reserved.</p>
-          </div>
-        </footer>
       </div>
     </div>
   );
