@@ -56,7 +56,7 @@ const Portfolio = () => {
   ];
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' || 'light';
+    const savedTheme = localStorage.getItem('theme') as 'dark' | 'dark' || 'light';
     const savedLang = localStorage.getItem('language') as 'fr' | 'en' || 'fr';
     setTheme(savedTheme);
     setCurrentLang(savedLang);
