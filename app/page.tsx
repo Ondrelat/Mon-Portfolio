@@ -101,14 +101,78 @@ const Portfolio = () => {
 
   const personalInfo: PersonalInfo = { name: "Benoît AVRILLON", title: t.hero.title, address: "111 chemin des Tâtes, LOVAGNY 74330", email: "avrillon.benoit@orange.fr", phone: "06 21 19 06 04", bio: t.hero.bio };
 
-  const projects: Project[] = [
-    { title: "Dictée Interactive", description: currentLang === 'fr' ? `Développement et lancement autonome d'une application web interactive pour l'apprentissage du français.\n\n* **Tech Stack :** Next.js, React, PostgreSQL, Prisma ORM\n* **Fonctionnalités principales :**\n  * Utilisation de Figma pour la conception UX/UI.\n  * Mise en œuvre des principes de conception responsive.\n  * Utilisation de React Context (useContext) pour une gestion d'état.\n  * Gestion du cycle complet du projet, de la conception au déploiement.\n  * Maîtrise du développement full-stack, intégration d'API et BDD.` : `Autonomous development and launch of an interactive web application for French language learning.\n\n* **Tech Stack:** Next.js, React, PostgreSQL, Prisma ORM\n* **Main Features:**\n  * Use of Figma for UX/UI design.\n  * Implementation of responsive design principles.\n  * Use of React Context (useContext) for state management.\n  * Complete project lifecycle management, from design to deployment.\n  * Mastery of full-stack development, API integration, and database management.`, tags: ["Next.js", "React", "PostgreSQL", "Prisma ORM", "AWS Polly API", "Figma"], years: "2024", links: { live: "https://www.dicteeinteractive.fr", github: "https://github.com/Ondrelat/Dictee_interactive", }, isMain: true, },
-    { title: "WikiLike + Collaborative Ranking", description: currentLang === 'fr' ? "Un projet de style wiki pour apprendre sur n'importe quel sujet, par classement utilisateur ou par texte. Le projet vise à combiner le classement collaboratif avec une base de connaissances." : "A wiki-style project for learning about any topic, by user ranking or by text. The project aims to combine collaborative ranking with a knowledge base.", tags: ["Next.js", "React", "PostgreSQL", "NestJS", "Prisma"], years: "2025", links: { live: "https://categorise.vercel.app/", github: "https://github.com/Ondrelat/categorise", }, status: 'in-progress', },
-    { title: "Jeu Creature Clicker", description: currentLang === 'fr' ? "Jeu développé avec Unity dans le style clicker. Projet explorant le développement de jeux vidéo avec des mécaniques de progression et de collection. Focus sur l'expérience utilisateur et les systèmes de récompenses." : "Game developed with Unity in the clicker style. Project exploring video game development with progression and collection mechanics. Focus on user experience and reward systems.", tags: ["Unity", "C#", "Game Development"], years: "2022", links: { github: "https://github.com/Ondrelat/CreatureClickerCollecte", } },
-    { title: "Wiki Like", description: currentLang === 'fr' ? "Projet visant à créer un WikiLike orienté expérience utilisateur pour l'apprentissage. Un de mes premiers projets full-stack mettant l'accent sur l'interface utilisateur et la facilité d'utilisation pour la création et le partage de connaissances." : "Project aimed at creating a user experience-oriented WikiLike for learning. One of my first full-stack projects focusing on user interface and ease of use for creating and sharing knowledge.", tags: ["Symfony", "PHP", "MySQL"], years: "2022", links: { github: "https://github.com/Ondrelat/WikiPartage", } },
-    { title: "Rock Paper Scissors Ultimate", description: currentLang === 'fr' ? "Défi personnel : Développer en 2h une version étendue de Pierre-Papier-Ciseaux avec 17 mouvements possibles. Algorithme complexe de détermination des gagnants." : "Personal challenge: Develop in 2 hours an extended version of Rock-Paper-Scissors with 17 possible moves. Complex algorithm for winner determination.", tags: ["Python", "Algorithmes", "Logique de jeu"], years: "2024", links: { github: "https://github.com/Ondrelat/ultimate-Rock-Sisor-Paper", }, },
-    { title: "Collaborative Rankings", description: currentLang === 'fr' ? "Plateforme permettant aux utilisateurs de créer des classements sur n'importe quel sujet et d'obtenir un classement global. Système de vote sophistiqué avec pondération." : "Platform allowing users to create rankings on any topic and obtain an overall ranking. Sophisticated voting system with weighting.", tags: ["Laravel", "PHP", "MySQL", "Inertia", "Vue.js", "Tailwind"], years: "2022", links: { github: "https://github.com/Ondrelat/Inertia", } },
-  ];
+const projects: Project[] = [
+  { 
+    title: "Dictée Interactive", 
+    description: currentLang === 'fr' ? 
+      `Lancement d'une dictée pour apprendre l'orthographe en français, avec pour principe d'apprendre les règles pendant la dictée.\n\nTech Stack : Next.js, React, PostgreSQL, Prisma ORM\n\nIntégration de l'API Amazon Polly pour convertir automatiquement du text en audio\nUtilisation de Figma pour la conception UX/UI.\nMise en œuvre des principes de conception responsive.\nUtilisation de React Context (useContext) pour une gestion d'état.\nMaîtrise du développement full-stack, intégration d'API et BDD.` : 
+      `Launch of a dictation application to learn French spelling, with the principle of learning rules during the dictation.\n\nTech Stack: Next.js, React, PostgreSQL, Prisma ORM\n\nIntegration of Amazon Polly API to automatically convert text to audio\nUse of Figma for UX/UI design.\nImplementation of responsive design principles.\nUse of React Context (useContext) for state management.\nMastery of full-stack development, API integration, and database management.`, 
+    tags: ["Next.js", "React", "PostgreSQL", "Prisma ORM", "AWS Polly API", "Figma"], 
+    years: "2024", 
+    links: { 
+      live: "https://www.dicteeinteractive.fr", 
+      github: "https://github.com/Ondrelat/Dictee_interactive", 
+    }, 
+    isMain: true, 
+  },
+  { 
+    title: "WikiLike + Collaborative Ranking", 
+    description: currentLang === 'fr' ? 
+      "Un projet de style wiki pour apprendre sur n'importe quel sujet, par classement utilisateur ou par texte. Le projet vise à combiner le classement collaboratif avec une base de connaissances." : 
+      "A wiki-style project for learning about any topic, by user ranking or by text. The project aims to combine collaborative ranking with a knowledge base.", 
+    tags: ["Next.js", "React", "PostgreSQL", "NestJS", "Prisma"], 
+    years: "2025", 
+    links: { 
+      live: "https://categorise.vercel.app/", 
+      github: "https://github.com/Ondrelat/categorise", 
+    }, 
+    status: 'in-progress', 
+  },
+  { 
+    title: "Jeu Creature Clicker", 
+    description: currentLang === 'fr' ? 
+      "Jeu développé avec Unity dans le style clicker. Projet explorant le développement de jeux vidéo avec des mécaniques de progression et de collection. Focus sur l'expérience utilisateur et les systèmes de récompenses." : 
+      "Game developed with Unity in the clicker style. Project exploring video game development with progression and collection mechanics. Focus on user experience and reward systems.", 
+    tags: ["Unity", "C#", "Game Development"], 
+    years: "2022", 
+    links: { 
+      github: "https://github.com/Ondrelat/CreatureClickerCollecte", 
+    } 
+  },
+  { 
+    title: "Wiki Like", 
+    description: currentLang === 'fr' ? 
+      "Projet visant à créer un WikiLike orienté expérience utilisateur pour l'apprentissage. Un de mes premiers projets full-stack mettant l'accent sur l'interface utilisateur et la facilité d'utilisation pour la création et le partage de connaissances." : 
+      "Project aimed at creating a user experience-oriented WikiLike for learning. One of my first full-stack projects focusing on user interface and ease of use for creating and sharing knowledge.", 
+    tags: ["Symfony", "PHP", "MySQL"], 
+    years: "2022", 
+    links: { 
+      github: "https://github.com/Ondrelat/WikiPartage", 
+    } 
+  },
+  { 
+    title: "Rock Paper Scissors Ultimate", 
+    description: currentLang === 'fr' ? 
+      "Défi personnel : Développer en 2h une version étendue de Pierre-Papier-Ciseaux avec 17 mouvements possibles. Algorithme complexe de détermination des gagnants." : 
+      "Personal challenge: Develop in 2 hours an extended version of Rock-Paper-Scissors with 17 possible moves. Complex algorithm for winner determination.", 
+    tags: ["Python", "Algorithmes", "Logique de jeu"], 
+    years: "2024", 
+    links: { 
+      github: "https://github.com/Ondrelat/ultimate-Rock-Sisor-Paper", 
+    }, 
+  },
+  { 
+    title: "Collaborative Rankings", 
+    description: currentLang === 'fr' ? 
+      "Plateforme permettant aux utilisateurs de créer des classements sur n'importe quel sujet et d'obtenir un classement global. Système de vote sophistiqué avec pondération." : 
+      "Platform allowing users to create rankings on any topic and obtain an overall ranking. Sophisticated voting system with weighting.", 
+    tags: ["Laravel", "PHP", "MySQL", "Inertia", "Vue.js", "Tailwind"], 
+    years: "2022", 
+    links: { 
+      github: "https://github.com/Ondrelat/Inertia", 
+    } 
+  },
+];
 
   const experiences: Experience[] = currentLang === 'fr' ? [ { title: "Analyste Programmeur", company: "TAGG INFORMATIQUE", period: "04/2021 - 10/2023", tasks: [ "Conception et développement de programmes batch et de solutions en langage propriétaire pour l'impression automatisée de correspondances avec données variables.", "Mise à jour de programmes existants en C#, C, et C++.", "Développement d'e-mails HTML et CSS pour l'envoi automatisé de communications.", "Gestion et maintenance autonome de la base de code partagée de l'équipe, incluant les mises à jour de la documentation technique associée.", "Création d'un cahier des charges pour l'implémentation d'une nouvelle fonctionnalité pour les programmeurs." ] }, { title: "Développeur Full Stack (Stagiaire)", company: "SEQUENTIEL, Annecy", period: "06/2019 - 07/2019", tasks: [ "Intégration de l'API tierce Sendinblue dans une application Symfony pour automatiser l'inscription des utilisateurs et le marketing par e-mail.", "Résolution de bugs liés aux paramètres de proxy et optimisation des ressources d'une application de bureau .NET C#.", "Intégration et mise à jour en HTML/CSS." ] } ] : [ { title: "Programmer Analyst", company: "TAGG INFORMATIQUE", period: "04/2021 - 10/2023", tasks: [ "Development and implementation of batch programs and proprietary solutions for automated printing of variable data correspondence.", "Review, optimization, and updating of existing programs in C#, C, and C++.", "Development of HTML and CSS emails for the automated sending of communications.", "Independent management and maintenance of the team's shared codebase, including updates to associated technical documentation.", "Creation of specifications for the implementation of new features for programmers." ] }, { title: "Full Stack Developer (Intern)", company: "SEQUENTIEL, Annecy", period: "06/2019 - 07/2019", tasks: [ "Integrated the Sendinblue third-party API into a Symfony application to automate user registration and email marketing processes.", "Resolved proxy-related bugs and optimized resources in a .NET C# desktop application.", "Integrated and updated using HTML/CSS." ] } ];
   const education: Education[] = currentLang === 'fr' ? [ { title: "BTS Services Informatiques aux Organisations, Option Développement", projects: [ "Développement de projets utilisant .NET avec TDD.", "Collaboration en équipe pour développer un jeu mobile dans Android Studio en utilisant la méthodologie SCRUM et le contrôle de version GIT.", "Développement d'applications web avec CakePHP." ] } ] : [ { title: "Associate Degree in Computer Science, specialized in Software Development", projects: [ "Developed projects using .NET with TDD.", "Collaborated in a team to develop a mobile game in Android Studio using SCRUM methodology and GIT version control.", "Developed web applications with CakePHP." ] } ];
