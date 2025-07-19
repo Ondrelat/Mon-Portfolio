@@ -120,7 +120,7 @@ const projects: Project[] = [
     description: currentLang === 'fr' ? 
       "Un projet de style wiki pour apprendre sur n'importe quel sujet, par classement utilisateur ou par texte. Le projet vise à combiner le classement collaboratif avec une base de connaissances." : 
       "A wiki-style project for learning about any topic, by user ranking or by text. The project aims to combine collaborative ranking with a knowledge base.", 
-    tags: ["Next.js", "React", "PostgreSQL", "NestJS", "Prisma"], 
+    tags: ["Next.js", "React", "PostgreSQL", "NestJS", "Prisma", "Parallel Routes"], 
     years: "2025", 
     links: { 
       live: "https://categorise.vercel.app/", 
