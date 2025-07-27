@@ -114,7 +114,7 @@ const projects: Project[] = [
       github: "https://github.com/Ondrelat/Dictee_interactive", 
     }, 
     isMain: true, 
-  },
+  },/*
   { 
     title: "WikiLike + Collaborative Ranking", 
     description: currentLang === 'fr' ? 
@@ -127,7 +127,7 @@ const projects: Project[] = [
       github: "https://github.com/Ondrelat/categorise", 
     }, 
     status: 'in-progress', 
-  },
+  },*/
   { 
     title: "Jeu Creature Clicker", 
     description: currentLang === 'fr' ? 
